@@ -6,7 +6,12 @@ import { redirect } from "next/navigation"
 export const checkoutAction = async (formData: FormData): Promise<void> => {
     const itemsJson = formData.get('items') as string
     const items = JSON.parse(itemsJson)
-    const line_items = items.map((item: any) => ({
+    interface Item {
+        name: string;
+        price: number;     // in cents if you're using Stripe
+        quantity: number
+    }
+    const line_items = items.map((item: Item) => ({
         price_data: {
             currency: 'cad',
             product_data: { name: item.name },

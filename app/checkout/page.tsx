@@ -15,7 +15,7 @@ const CheckoutPage = () => {
         return (
             <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
                 <h1 className="text-3xl font-bold mb-4 text-primary">Your Cart is Empty</h1>
-                <p className="text-muted-foreground mb-6">Looks like you haven't added anything to your cart yet.</p>
+                <p className="text-muted-foreground mb-6">Looks like you have not added anything to your cart yet.</p>
                 <Link href="/products">
                     <Button variant="default" className="px-6 py-2 text-base font-semibold">
                         Continue Shopping
